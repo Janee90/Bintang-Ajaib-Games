@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#70d7e8">
+<meta name="description" content="Bintang Ajaib: pengembaraan pembelajaran dwibahasa untuk kanak-kanak 4–6 tahun oleh JJ Creative Studio.">
+<title>Bintang Ajaib | JJ Creative Studio</title>
+<style>
+:root{--ink:#24345a;--blue:#65cbe6;--pink:#ff9ebd;--yellow:#ffd967;--mint:#9be7c3;--purple:#b9a5ff;--white:#fffdf8;--shadow:0 8px 0 rgba(36,52,90,.12)}
+*{box-sizing:border-box} body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#a4eafa 0%,#d8f8ff 45%,#e4ffdf 100%);min-height:100vh}
+button{font:inherit;cursor:pointer;touch-action:manipulation} button:focus-visible{outline:4px solid #24345a;outline-offset:3px}
+.wrap{width:min(900px,100%);margin:auto;padding:14px 14px 30px}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brandmark{width:48px;height:48px;border-radius:16px;background:var(--yellow);display:grid;place-items:center;font-size:27px;box-shadow:var(--shadow);border:3px solid white}
+.brand small{display:block;font-size:11px;letter-spacing:1.5px}
+.top-actions{display:flex;gap:8px}.pill{border:2px solid white;background:#ffffffc9;color:var(--ink);padding:9px 13px;border-radius:99px;font-weight:800;box-shadow:0 3px 0 #0000000c}
+.hero{text-align:center;padding:12px 0 8px}.eyebrow{display:inline-block;background:#ffffffb8;border-radius:99px;padding:6px 12px;font-weight:800;font-size:12px;letter-spacing:.5px}
+h1{font-size:clamp(30px,7vw,52px);line-height:1.02;margin:12px 0 7px;text-shadow:2px 3px 0 white;color:#4e53a5}.subtitle{margin:0 auto;max-width:560px;font-weight:650}
+.stats{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:14px 0}.stat{background:#fffdf4;border:2px solid white;border-radius:15px;padding:8px 13px;font-weight:900;box-shadow:0 4px 0 #24345a12}.stat span{color:#e39a12}
+.progress{height:12px;background:#ffffffad;border:2px solid white;border-radius:99px;overflow:hidden;margin:10px 0 16px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#8be5b2,#ffd967);transition:width .3s}
+.card{background:#ffffffdf;border:3px solid white;border-radius:26px;padding:clamp(15px,4vw,28px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.scene-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.level{font-weight:900;color:#6a58ba;background:#eee8ff;padding:7px 12px;border-radius:99px}
+.scene-title{font-size:clamp(23px,5vw,32px);margin:10px 0 4px}.instruction{margin:0 0 12px;font-weight:650}
+.art{height:clamp(125px,30vw,190px);display:flex;align-items:center;justify-content:center;gap:clamp(6px,3vw,24px);background:linear-gradient(180deg,#c7f4ff,#e8fff2);border-radius:22px;margin:12px 0 17px;position:relative;border:2px dashed #8fd9e9}
+.character{font-size:clamp(60px,16vw,104px);filter:drop-shadow(0 5px 0 #00000010);animation:bob 2s ease-in-out infinite}.object{font-size:clamp(38px,11vw,67px);animation:bob 2.4s ease-in-out infinite}.sparkle{position:absolute;font-size:25px}.s1{left:8%;top:13%}.s2{right:9%;top:12%}.s3{right:17%;bottom:12%}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.option{min-height:66px;border:3px solid white;border-radius:18px;background:#fff5c8;color:var(--ink);font-size:clamp(16px,4vw,20px);font-weight:900;padding:12px;box-shadow:0 5px 0 #e5c96a;transition:transform .12s,filter .12s}.option:nth-child(2){background:#e6dcff;box-shadow:0 5px 0 #b6a5e7}.option:nth-child(3){background:#d7f8e6;box-shadow:0 5px 0 #9ed8b8}.option:nth-child(4){background:#ffe0ea;box-shadow:0 5px 0 #eab0c3}.option:active{transform:translateY(3px);box-shadow:none}.option.correct{background:#b8f4cb!important;box-shadow:0 5px 0 #70c88b!important}.option.wrong{background:#ffd5d5!important;box-shadow:0 5px 0 #e8a1a1!important}
+.feedback{min-height:30px;text-align:center;font-weight:900;font-size:18px;padding:9px 0 2px}.next-row{display:flex;justify-content:center;margin-top:10px}.primary{border:3px solid white;background:#6b66d9;color:white;border-radius:99px;padding:13px 23px;font-size:17px;font-weight:950;box-shadow:0 5px 0 #4a459f}.primary:disabled{opacity:.45;cursor:not-allowed}.hidden{display:none!important}
+.start-screen,.end-screen{text-align:center}.big-emoji{font-size:clamp(75px,22vw,130px);margin:8px}.start-screen h2,.end-screen h2{font-size:clamp(26px,6vw,36px);margin:8px 0}.start-screen p,.end-screen p{font-size:17px;line-height:1.5;max-width:570px;margin:8px auto 18px}.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0}.howto div{background:#fff8dc;border:2px solid white;border-radius:16px;padding:12px 7px;font-size:13px;font-weight:800}.howto strong{display:block;font-size:27px;margin-bottom:4px}
+footer{text-align:center;font-size:12px;font-weight:700;padding:22px 8px 0;color:#43547b}
+.confetti{font-size:40px;margin:8px}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@media(max-width:430px){.wrap{padding:10px}.brandmark{width:42px;height:42px}.options{gap:8px}.option{min-height:62px;padding:9px 6px}.howto{gap:6px}.howto div{font-size:11px;padding:10px 4px}.top-actions .pill{padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><div class="brandmark">🌟</div><div>JJ CREATIVE STUDIO<small>PLAY • LEARN • GROW</small></div></div>
+  <div class="top-actions"><button class="pill" id="langBtn" aria-label="Change language">🇲🇾 BM</button><button class="pill" id="soundBtn" aria-label="Toggle sound">🔊</button></div>
+</header>
+<section class="hero">
+  <div class="eyebrow" id="eyebrow">PENGEMBARAAN PEMBELAJARAN • UMUR 4–6</div>
+  <h1 id="mainTitle">Bintang Ajaib</h1>
+  <p class="subtitle" id="tagline">Bantu Bomi si arnab kumpul bintang ajaib!</p>
+  <div class="stats">
+    <div class="stat">⭐ <span id="scoreLabel">Markah</span>: <b id="score">0</b></div>
+    <div class="stat">🗺️ <span id="levelLabel">Misi</span>: <b id="missionCount">0/5</b></div>
+    <div class="stat">❤️ <span id="heartLabel">Cuba lagi</span>: <b id="tries">0</b></div>
+  </div>
+  <div class="progress" aria-label="Progress misi"><div class="progress-fill" id="progressFill"></div></div>
+</section>
+
+<main class="card">
+  <section id="startScreen" class="start-screen">
+    <div class="big-emoji">🐰🌈⭐</div>
+    <h2 id="welcomeTitle">Sedia untuk mengembara?</h2>
+    <p id="welcomeText">Ikut Bomi merentasi Hutan Pelangi. Jawab 5 cabaran mudah tentang nombor, warna, haiwan dan bentuk untuk mengumpul bintang!</p>
+    <div class="howto">
+      <div><strong>👀</strong><span id="step1">Lihat petunjuk</span></div>
+      <div><strong>👆</strong><span id="step2">Pilih jawapan</span></div>
+      <div><strong>⭐</strong><span id="step3">Kumpul bintang</span></div>
+    </div>
+    <button class="primary" id="startBtn">Mula Pengembaraan! 🚀</button>
+  </section>
+  <section id="gameScreen" class="hidden">
+    <div class="scene-head"><span class="level" id="levelPill">MISI 1 / 5</span><span id="mapLabel">📍 Hutan Pelangi</span></div>
+    <h2 class="scene-title" id="question">Berapakah bilangan epal?</h2>
+    <p class="instruction" id="hint">Kira objek dengan teliti.</p>
+    <div class="art" id="art" aria-label="Ilustrasi misi">
+      <span class="sparkle s1">✨</span><span class="sparkle s2">🌼</span><span class="sparkle s3">✨</span>
+      <span class="character" id="character">🐰</span><span class="object" id="objects">🍎🍎🍎</span>
+    </div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+    <div class="next-row"><button class="primary hidden" id="nextBtn">Misi Seterusnya ➜</button></div>
+  </section>
+  <section id="endScreen" class="end-screen hidden">
+    <div class="big-emoji" id="endEmoji">🏆🌟</div>
+    <h2 id="endTitle">Hebat, Pengembara!</h2>
+    <p id="endText">Kamu berjaya membantu Bomi.</p>
+    <div class="stats" style="margin:16px 0 22px"><div class="stat">⭐ <span id="finalScoreLabel">Markah akhir</span>: <b id="finalScore">0</b>/100</div><div class="stat">🏅 <span id="badgeLabel">Lencana</span>: <b id="badge">Bintang Cilik</b></div></div>
+    <button class="primary" id="againBtn">Main Lagi 🔁</button>
+  </section>
+</main>
+<footer>© 2026 JJ Creative Studio • <span id="footerText">Permainan pembelajaran dwibahasa untuk kanak-kanak.</span><br><span id="adultNote">Disyorkan bermain bersama ibu bapa atau penjaga.</span></footer>
+</div>
+<script>
+const words = {
+ms:{eyebrow:"PENGEMBARAAN PEMBELAJARAN • UMUR 4–6",tagline:"Bantu Bomi si arnab kumpul bintang ajaib!",score:"Markah",mission:"Misi",tries:"Cuba lagi",welcomeTitle:"Sedia untuk mengembara?",welcomeText:"Ikut Bomi merentasi Hutan Pelangi. Jawab 5 cabaran mudah tentang nombor, warna, haiwan dan bentuk untuk mengumpul bintang!",step1:"Lihat petunjuk",step2:"Pilih jawapan",step3:"Kumpul bintang",start:"Mula Pengembaraan! 🚀",map:"📍 Hutan Pelangi",hint:"Lihat petunjuk dan pilih jawapan yang betul.",correct:"Hebat! Jawapan betul! ⭐ +20 markah",wrong:"Hampir! Cuba lagi. 💪",next:"Misi Seterusnya ➜",finish:"Lihat Keputusan 🏆",endTitle:"Hebat, Pengembara!",endText:"Kamu membantu Bomi mengumpul bintang ajaib. Teruskan belajar dan bermain!",finalScore:"Markah akhir",badgeLabel:"Lencana",badge:"Bintang Cilik",again:"Main Lagi 🔁",footer:"Permainan pembelajaran dwibahasa untuk kanak-kanak.",adult:"Disyorkan bermain bersama ibu bapa atau penjaga.",q:[
+{title:"Berapakah bilangan epal?",hint:"Kira epal merah satu demi satu.",obj:"🍎🍎🍎",answers:["2","3","4","5"],correct:1,ok:"Tepat! Ada 3 biji epal.",map:"📍 Kebun Epal"},
+{title:"Cari warna kuning!",hint:"Pilih bintang yang berwarna kuning.",obj:"⭐🌙🍃",answers:["Biru / Blue","Hijau / Green","Kuning / Yellow","Merah / Red"],correct:2,ok:"Bagus! Bintang itu kuning.",map:"📍 Bukit Pelangi"},
+{title:"Haiwan manakah berkata “meow”?",hint:"Pilih haiwan yang betul.",obj:"🐶🐱🐸",answers:["Anjing 🐶","Kucing 🐱","Katak 🐸","Ikan 🐟"],correct:1,ok:"Ya! Kucing berkata meow.",map:"📍 Tasik Haiwan"},
+{title:"Cari bentuk bulat!",hint:"Bentuk bulat tiada bucu.",obj:"🔺🟦⚪",answers:["Segi tiga","Segi empat","Bulat","Bintang"],correct:2,ok:"Betul! Itu bentuk bulat.",map:"📍 Gua Bentuk"},
+{title:"Bomi ada 2 bintang. Dia jumpa 1 lagi. Berapa semuanya?",hint:"Kira: 2 tambah 1 sama dengan…",obj:"⭐⭐ + ⭐",answers:["1","2","3","4"],correct:2,ok:"Hebat! 2 tambah 1 ialah 3.",map:"📍 Puncak Bintang"}
+]},
+en:{eyebrow:"LEARNING ADVENTURE • AGES 4–6",tagline:"Help Bomi the bunny collect magic stars!",score:"Score",mission:"Mission",tries:"Try again",welcomeTitle:"Ready for an adventure?",welcomeText:"Join Bomi through Rainbow Forest. Answer 5 easy challenges about numbers, colours, animals and shapes to collect stars!",step1:"Look for clues",step2:"Choose an answer",step3:"Collect stars",start:"Start Adventure! 🚀",map:"📍 Rainbow Forest",hint:"Look at the clue and choose the right answer.",correct:"Amazing! Correct answer! ⭐ +20 points",wrong:"Almost! Try again. 💪",next:"Next Mission ➜",finish:"See Results 🏆",endTitle:"Amazing, Explorer!",endText:"You helped Bomi collect magic stars. Keep learning and playing!",finalScore:"Final score",badgeLabel:"Badge",badge:"Little Star",again:"Play Again 🔁",footer:"A bilingual learning game for children.",adult:"Playing with a parent or guardian is recommended.",q:[
+{title:"How many apples are there?",hint:"Count the red apples one by one.",obj:"🍎🍎🍎",answers:["2","3","4","5"],correct:1,ok:"That's right! There are 3 apples.",map:"📍 Apple Orchard"},
+{title:"Find the yellow colour!",hint:"Choose the yellow star.",obj:"⭐🌙🍃",answers:["Blue","Green","Yellow","Red"],correct:2,ok:"Great! The star is yellow.",map:"📍 Rainbow Hill"},
+{title:"Which animal says “meow”?",hint:"Choose the correct animal.",obj:"🐶🐱🐸",answers:["Dog 🐶","Cat 🐱","Frog 🐸","Fish 🐟"],correct:1,ok:"Yes! A cat says meow.",map:"📍 Animal Lake"},
+{title:"Find the circle!",hint:"A circle has no corners.",obj:"🔺🟦⚪",answers:["Triangle","Square","Circle","Star"],correct:2,ok:"Correct! That's a circle.",map:"📍 Shape Cave"},
+{title:"Bomi has 2 stars and finds 1 more. How many now?",hint:"Count: 2 plus 1 equals…",obj:"⭐⭐ + ⭐",answers:["1","2","3","4"],correct:2,ok:"Wonderful! 2 plus 1 equals 3.",map:"📍 Star Peak"}
+]}
+};
+let lang="ms", index=0, score=0, tries=0, locked=false, sound=true;
+const $=id=>document.getElementById(id);
+function say(text){if(sound && "speechSynthesis" in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang==="ms"?"ms-MY":"en-US";u.rate=.9;speechSynthesis.speak(u)}}
+function renderStatic(){const w=words[lang];$("langBtn").textContent=lang==="ms"?"🇲🇾 BM":"🇬🇧 EN";$("eyebrow").textContent=w.eyebrow;$("tagline").textContent=w.tagline;$("scoreLabel").textContent=w.score;$("levelLabel").textContent=w.mission;$("heartLabel").textContent=w.tries;$("welcomeTitle").textContent=w.welcomeTitle;$("welcomeText").textContent=w.welcomeText;$("step1").textContent=w.step1;$("step2").textContent=w.step2;$("step3").textContent=w.step3;$("startBtn").textContent=w.start;$("hint").textContent=w.hint;$("nextBtn").textContent=w.next;$("finalScoreLabel").textContent=w.finalScore;$("badgeLabel").textContent=w.badgeLabel;$("badge").textContent=w.badge;$("againBtn").textContent=w.again;$("footerText").textContent=w.footer;$("adultNote").textContent=w.adult;$("endTitle").textContent=w.endTitle;$("endText").textContent=w.endText;if(!$("startScreen").classList.contains("hidden"))return;if(!$("gameScreen").classList.contains("hidden"))renderQuestion();}
+function renderQuestion(){const w=words[lang],q=w.q[index];locked=false;$("levelPill").textContent=(lang==="ms"?"MISI ":"MISSION ")+(index+1)+" / 5";$("mapLabel").textContent=q.map;$("question").textContent=q.title;$("hint").textContent=q.hint;$("objects").textContent=q.obj;$("score").textContent=score;$("missionCount").textContent=index+"/5";$("tries").textContent=tries;$("progressFill").style.width=(index/5*100)+"%";$("feedback").textContent="";$("nextBtn").classList.add("hidden");$("nextBtn").textContent=index===4?w.finish:w.next;const opts=$("options");opts.innerHTML="";q.answers.forEach((a,i)=>{const b=document.createElement("button");b.className="option";b.textContent=a;b.onclick=()=>answer(i,b);opts.appendChild(b)});say(q.title+" "+q.hint)}
+function answer(i,btn){if(locked)return;const w=words[lang],q=w.q[index];if(i===q.correct){locked=true;score+=20;btn.classList.add("correct");$("feedback").textContent=w.correct;$("score").textContent=score;$("tries").textContent=tries;$("missionCount").textContent=(index+1)+"/5";$("progressFill").style.width=((index+1)/5*100)+"%";[...$("options").children].forEach(b=>b.disabled=true);$("nextBtn").classList.remove("hidden");$("nextBtn").textContent=index===4?w.finish:w.next;say(q.ok)}else{tries++;btn.classList.add("wrong");btn.disabled=true;$("feedback").textContent=w.wrong;$("tries").textContent=tries;say(w.wrong)}}
+function start(){index=0;score=0;tries=0;$("score").textContent=score;$("missionCount").textContent="0/5";$("tries").textContent=tries;$("startScreen").classList.add("hidden");$("endScreen").classList.add("hidden");$("gameScreen").classList.remove("hidden");renderQuestion()}
+function next(){if(index===4){finish();return}index++;renderQuestion()}
+function finish(){$("gameScreen").classList.add("hidden");$("endScreen").classList.remove("hidden");$("finalScore").textContent=score;$("progressFill").style.width="100%";$("endEmoji").textContent=score===100?"🏆🌈⭐":score>=60?"🌟🐰🎉":"💪🐰⭐";$("badge").textContent=score===100?(lang==="ms"?"Juara Bintang":"Star Champion"):score>=60?(lang==="ms"?"Pengembara Hebat":"Super Explorer"):(lang==="ms"?"Berani Mencuba":"Brave Tryer");say(words[lang].endTitle)}
+$("startBtn").onclick=start;$("againBtn").onclick=start;$("nextBtn").onclick=next;
+$("langBtn").onclick=()=>{lang=lang==="ms"?"en":"ms";renderStatic();if(!$("gameScreen").classList.contains("hidden"))renderQuestion()};
+$("soundBtn").onclick=()=>{sound=!sound;$("soundBtn").textContent=sound?"🔊":"🔇";if(!sound&&"speechSynthesis"in window)speechSynthesis.cancel()};
+renderStatic();
+</script>
+</body>
+</html>
